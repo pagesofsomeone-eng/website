@@ -25,7 +25,7 @@ let defaultProducts = [
     { id: 1, nameAr: 'ساعة ذكية فاخرة', price: 75000, oldPrice: 90000, category: 'electronics', imgs: ['photo/watch.jpg'], colors: ['أسود', 'فضي'], sizes: ['42مم', '44مم'], specs: 'الحجم: 44 مم\nالبطارية: تدوم 5 أيام.\nشاشة أموليد عالية الدقة ومقاومة للماء بالكامل.' },
     { id: 2, nameAr: 'حقيبة ظهر عصرية', price: 35000, oldPrice: 35000, category: 'fashion', imgs: ['photo/backpack.jpg'], colors: ['رمادي', 'أسود'], sizes: ['M', 'L'], specs: 'القياس: 15*18 سم\nالمنفذ: USB مدمج.\nعملية تناسب العمل والدراسة والرحلات ومقاومة للسوائل والأمطار.' }
 ];
-let products = JSON.parse(localStorage.getItem('rw_products')) || defaultProducts;
+localStorage.setItem('rw_products', JSON.stringify(products));
 
 // 4. متغيرات الحالة العامة للسلة والعمليات
 let cart = []; 
